@@ -10,7 +10,7 @@ export const FullNameDisplay = () => {
     setFormData(data);
 
     console.log("Form Data:", data);
-    e.target.reset(); // Reset form fields after submission
+    // Reset form fields after submission
   };
 
   return (
@@ -27,11 +27,11 @@ export const FullNameDisplay = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      <div style={{ margin: 10 }}>
+      <>
         {formData.firstName &&
           formData.lastName &&
           `Full Name: ${formData.firstName} ${formData.lastName}`}
-      </div>
+      </>
     </div>
   );
 };
