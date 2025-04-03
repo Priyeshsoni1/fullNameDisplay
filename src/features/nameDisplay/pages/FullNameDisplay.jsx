@@ -19,11 +19,11 @@ export const FullNameDisplay = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="firstName">First Name :</label>
-          <input name="firstName" required />
+          <input name="firstName" required type="text" />
         </div>
         <div>
           <label htmlFor="lastName">Last Name :</label>
-          <input name="lastName" required />
+          <input name="lastName" type="text" required />
         </div>
         <button type="submit">Submit</button>
       </form>
