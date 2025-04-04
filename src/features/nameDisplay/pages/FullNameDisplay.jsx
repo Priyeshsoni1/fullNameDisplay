@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export const FullNameDisplay = () => {
-  // const [formData, setFormData] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [fullName, setFullName] = useState("");
@@ -9,31 +8,26 @@ export const FullNameDisplay = () => {
     e.preventDefault();
     if (firstName && lastName) setFullName(`${firstName} ${lastName}`);
   }
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData(e.target);
-  //   const data = Object.fromEntries(formData.entries());
-  //   setFormData(data);
-  // };
-
   return (
     <div>
       <h1>Full Name Display</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name :</label>
+        <label htmlFor="firstName">First Name: </label>
         <input
-          name="firstName"
-          id="firstName"
-          required
+          value={firstName}
           type="text"
+          id="firstName"
+          name="firstName"
+          required
           onChange={(e) => setFirstName(e.target.value)}
         />
         <br />
-        <label htmlFor="lastName">Last Name :</label>
+        <label htmlFor="lastName">Last Name: </label>
         <input
-          name="lastName"
-          id="lastName"
+          value={lastName}
           type="text"
+          id="lastName"
+          name="lastName"
           required
           onChange={(e) => setLastName(e.target.value)}
         />
@@ -41,9 +35,6 @@ export const FullNameDisplay = () => {
         <button type="submit">Submit</button>
       </form>
       {fullName && <div>Full Name: {fullName}</div>}
-      {/* {formData.firstName &&
-        formData.lastName &&
-        `Full Name: ${formData.firstName} ${formData.lastName}`} */}
     </div>
   );
 };
