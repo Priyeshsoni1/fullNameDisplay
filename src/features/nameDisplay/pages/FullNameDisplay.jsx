@@ -8,9 +8,6 @@ export const FullNameDisplay = () => {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     setFormData(data);
-
-    console.log("Form Data:", data);
-    // Reset form fields after submission
   };
 
   return (
@@ -32,11 +29,13 @@ export const FullNameDisplay = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      <>
+
+      {/* ✅ Wrap the full name inside a div so Cypress can find it */}
+      <div id="fullNameDisplay">
         {formData.firstName &&
           formData.lastName &&
           `Full Name: ${formData.firstName} ${formData.lastName}`}
-      </>
+      </div>
     </div>
   );
 };
