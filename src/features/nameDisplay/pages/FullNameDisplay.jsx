@@ -16,12 +16,7 @@ export const FullNameDisplay = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="firstName">First Name :</label>
-          <input
-            name="firstName"
-            required
-            type="text"
-            pattern="^[A-Za-z\s]+$"
-          />
+          <input name="firstName" required type="text" />
         </div>
         <div>
           <label htmlFor="lastName">Last Name :</label>
