@@ -23,6 +23,7 @@ export const FullNameDisplay = () => {
         <label htmlFor="firstName">First Name :</label>
         <input
           name="firstName"
+          id="firstName"
           required
           type="text"
           onChange={(e) => setFirstName(e.target.value)}
@@ -31,6 +32,7 @@ export const FullNameDisplay = () => {
         <label htmlFor="lastName">Last Name :</label>
         <input
           name="lastName"
+          id="lastName"
           type="text"
           required
           onChange={(e) => setLastName(e.target.value)}
