@@ -14,23 +14,18 @@ export const FullNameDisplay = () => {
     <div>
       <h1>Full Name Display</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name :</label>
-          <input name="firstName" required type="text" />
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name :</label>
-          <input name="lastName" type="text" required pattern="^[A-Za-z\s]+$" />
-        </div>
+        <label htmlFor="firstName">First Name :</label>
+        <input name="firstName" required type="text" />
+        <br />
+        <label htmlFor="lastName">Last Name :</label>
+        <input name="lastName" type="text" required />
+        <br />
         <button type="submit">Submit</button>
       </form>
 
-      {/* ✅ Wrap the full name inside a div so Cypress can find it */}
-      <div id="fullNameDisplay">
-        {formData.firstName &&
-          formData.lastName &&
-          `Full Name: ${formData.firstName} ${formData.lastName}`}
-      </div>
+      {formData.firstName &&
+        formData.lastName &&
+        `Full Name: ${formData.firstName} ${formData.lastName}`}
     </div>
   );
 };
